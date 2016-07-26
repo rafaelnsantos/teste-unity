@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
 		ren = transform.Find("body").GetComponent<SpriteRenderer>();
 		frontCheck = transform.Find("frontCheck").transform;
 		score = GameObject.Find("Score").GetComponent<Score>();
-		score.score -=10;
+		score.score -=5;
 	}
 
 	void FixedUpdate ()
@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour
 		ren.sprite = deadEnemy;
 
 		// Increase the score by 100 points
-		score.score += 25;
+		score.score += 7;
 
 		// Set dead to true.
 		dead = true;
