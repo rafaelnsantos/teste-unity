@@ -18,13 +18,13 @@ public class Enemy : MonoBehaviour
 	private bool dead = false;			// Whether or not the enemy is dead.
 	private Score score;				// Reference to the Score script.
 
-	
 	void Awake()
 	{
 		// Setting up the references.
 		ren = transform.Find("body").GetComponent<SpriteRenderer>();
 		frontCheck = transform.Find("frontCheck").transform;
 		score = GameObject.Find("Score").GetComponent<Score>();
+		score.score -=10;
 	}
 
 	void FixedUpdate ()
@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour
 		ren.sprite = deadEnemy;
 
 		// Increase the score by 100 points
-		score.score += 100;
+		score.score += 25;
 
 		// Set dead to true.
 		dead = true;
