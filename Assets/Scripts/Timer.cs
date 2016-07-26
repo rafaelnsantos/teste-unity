@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour {
 		
 		GetComponent<GUIText>().text = ""+Mathf.Ceil(current);
 
-		if(current <= 20.0f){
+		if(current <= 0.0f){
 
 			if(GameObject.Find("Score").GetComponent<Score>().score >=0){
 				GameObject.Find("Score").GetComponent<GUIText>().text = "uhul";
